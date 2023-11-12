@@ -33,7 +33,7 @@ async def get_cat_picture(ctx):
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-        await ctx.send("Command not found. Use `!help` for a list of available commands.")
+        await ctx.send("Command not found. Use `c!help` for a list of available commands.")
     elif isinstance(error, commands.MissingRequiredArgument):
         await ctx.send("Missing required argument. Check the command usage with `!help`.")
     elif isinstance(error, commands.CommandInvokeError):
